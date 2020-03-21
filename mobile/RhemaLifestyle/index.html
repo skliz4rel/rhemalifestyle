@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>RhemaLifestyle Mobile</title>
+		<link rel="stylesheet" href="themes/Rhemelifesyletheme.min.css" />
+		
+		<link rel="stylesheet" href="themes/jquery.mobile.custom.structure.min.css" />
+                <link rel="stylesheet" href="themes/jquery.mobile.datepicker.css"/>
+		<style type="text/css">
+		
+			.splash{
+				width:100%;
+				height: 100%;
+				background-color: black;
+				z-index: 999;
+			}
+                        
+                        .power{                            
+                            margin-left:20px;                            
+                        }
+                        
+                        h1{
+                            margin-left:20px;
+                        }
+                        
+                        .success{
+                            color:green;
+                        }
+                        
+		</style>
+		<script src="js/jquery.js"></script>
+                <script src="js/jquery-ui-1.8.20.min.js"></script>
+		<script src="js/jquery.mobile.custom.min.js"></script>
+                <script src="js/jquery.mobile.datepicker.js"></script>
+                <script src="js/database.js"></script>
+		<script src="js/script.js"></script>
+	</head> 
+	<body>
+	
+	
+		<div data-role="page" data-theme="a"  id="stepone">
+		
+			<div data-role="header" data-position="inline">
+				<h1>Step One</h1>
+			</div>
+			
+			<div data-role="content" data-theme="a">
+				
+				<!-- <div class="splash"></div> -->
+                                
+                                
+					
+					<a href="#info" data-role="button">Next</a>
+			</div>
+			
+                    <div data-role="footer"><span class="power">Powered by Jiz Technologies</span></div>
+		</div>
+		
+		
+		
+		<div data-role="page" id="info">
+		
+			<div data-role="header">
+			<a href="#stepone" data-rel="back" data-role="button">Back</a> 	<h1>Info</h1>				
+			</div>
+			
+			<div data-role="content">
+			
+				
+				<a href="#location" data-role="button">Next</a>
+			</div>
+		
+		
+			<div data-role="footer"><span class="power">Powered by Jiz Technologies</span></div>
+		</div>
+		
+		
+		<div data-role="page"  id="location">
+		
+			<div data-role="header">
+				<a href="#info" data-rel="back" data-role="button">Back</a> <h1>Second Page</h1>
+			</div>
+			
+			<div data-role="content">	                            
+		
+			<label for="select-choice-0" class="select">Select Continent:</label>
+				<select name="continent" id="continent" required>
+				   <option value="">Choose Your Continent</option>
+				   <option value="Africa">Africa</option>
+				   <option value="Asia">Asia</option>
+				   <option value="Australia">Australia</option>
+				   <option value="Europe">Europe</option>
+				   <option value="North America">North America</option>
+				   <option value="South America">South America</option>
+				</select>
+				
+				
+		        <label for="select-choice-0">Select Country:</label>
+				<select name="continent" id="country" required >
+				 
+				</select>
+				
+                                
+         <fieldset data-role="controlgroup" data-type="horizontal">
+			<legend>Are you a member of Rhema Chapel?</legend>
+			<input type="radio" name="radio-choice-h-2" id="radio-choice-h-2a" value="Not a member"  class="radio-choice-h-2">
+			<label for="radio-choice-h-2a">Not a member</label>
+			<input type="radio" name="radio-choice-h-2" id="radio-choice-h-2b" value="A Member" class="radio-choice-h-2">
+			<label for="radio-choice-h-2b">A Member</label>
+			
+		</fieldset>
+                         
+<a href="#register" data-role="button" id="locationNext"> Next</a>
+
+</div>
+
+<div data-role="footer"><span class="power">Powered by Jiz Technologies</span></div>
+</div>
+            
+            
+            
+    <div data-role="page" id="choosebranch">        
+        
+        <div data-role="header"> <a href="#" data-role="button"  data-rel="back"> Back</a><h1>Choose Branch</h1></div>
+          
+        <div data-role="content">This is the content
+        
+           
+             <label for="select-choice-1">Select Branch:</label>
+				<select name="select-choice-1" id="branch">
+                                    <option value="">Select Branch</option>
+				</select>
+        
+             <a href="#" data-role="button" id="showregister">Next</a>
+        </div>
+        
+        
+        
+        <div data-role="footer"><span class="power">Powered by Jiz Technologies</span></div>
+       
+     </div>
+        
+        
+            
+
+<div id="register" data-role="page">
+
+	<div data-role="header">
+		<a href="#location" data-rel="back" data-role="button">Back</a> <h1>Register</h1>
+	</div>
+	
+	<div data-role="content">
+	
+		<form name="registerform" id="registerform" data-ajax="false">
+			<label for="name">Name</label>
+			<input type="text" name="name" id="name" value="" required/>
+			
+			<label for="username">Username</label>
+			<input type="text" name="username" id="username" value="" required/>
+			
+			
+			<label for="phone">Phone</label>
+			<input type="text" name="phone" id="phone" value="" required/>
+			
+			
+			<label for="email">Email</label>
+                        <input type="text" name="email" id="email" value=""  required/>			
+			
+			<input type="button" value="submit" name="submit" id = "submitregister"/>
+			
+			
+		</form>
+	</div>	
+	
+	<div data-role="footer"><span class="power">Powered by Jiz Technologies</span></div>
+
+</div>
+            
+  <div id="home" data-role="page">
+      <div data-role="header"><h1>Home Header</h1></div>
+      
+      <div data-role="content">
+          
+          <a href="#nationalquater" data-role="button" data-theme="b" id="natbut">National Headquaters</a>
+          
+          <a href="intdialog.html" data-role="button" data-theme="b" id="intbut"  class=" ui-corner-all" data-transition="slidedown">International Headquaters</a>
+          
+         
+          
+          <a href="#multimedia" data-role="button" data-theme="b" id="downbut">Download Multimedia Messages</a>
+          
+          
+          <a href="#prefeedback" data-role="button" data-theme="b" id="yourfedbut">Your Feedback</a>
+      </div>
+      
+      
+      <div data-role="footer">
+          
+          <span class="power">Powered by Jiz Technologies</span>
+      </div>
+      
+  </div>
+            
+            
+     
+   <div data-role="page" id="multimedia">
+       
+       <div data-role="header"><a href="#home" data-role="button">Back</a> <h1>Download Media's</div>
+       
+       <div data-role="content">
+           Search media by date
+           
+       </div>
+       
+       <div data-role="footer">           
+           <span class="power">Powered by Jiz Technologies</span>
+       </div>
+    </div>
+            
+            
+            
+  
+            
+   <div data-role="page" id="nationalquater">  
+         
+       <div data-role="header"> <a href="#home"  data-role="button" data-rel="back">Back </a><h1>National Headquaters (Nigeria)</h1></div>
+   
+       <div data-role="content">
+           
+           <a href="#pastormessage" data-role="button" data-theme="b" id="pmsgbut">Pastor's Message</a>
+           
+           <a href="#letchat" data-role="button" data-theme="b" id="letchatbut">Let's Chat</a>
+           
+           <a href="#" data-role="button" data-theme="b" id="maraginfobut">Marriage Information</a>
+           
+           <a href="#" data-role="button" data-theme="b" id="felinfobut">Fellowship Information</a>
+           
+           <a href="#" data-role="button" data-theme="b" id="hfelbut">House Fellowship Address</a>
+           
+       </div>       
+       
+       <div data-role="footer"> <span class="power">Powered by Jiz Technologies</span>  </div>
+   </div>    
+       
+            
+            
+            
+      <div data-role="page" id="pastormessage">      
+          <div data-role="header">              
+              <a href="#nationalquater" data-rel="back"  data-role="button">Back</a> <h1>Pastor's Message</h1>
+          </div>
+                     
+          <div data-role="content">              
+              <label for="mdate">Enter date</label>
+            
+              <input type="date" name="mdate" id="mdate" data-inline="true" required="required" > 
+              
+              <input type="button" name="getmessage" id="getmessage" value="Get Message">
+              
+              <br/>
+              
+              
+                  <ul id='pmessages' data-role='listview' data-inset='true' data-filter='true' data-filter-theme='a' data-filter-placeholder='Pastors Message'>
+                      
+                      
+                  </ul>
+                  
+                  
+                  
+              
+          </div>
+          
+          <div data-role="footer">
+              <span class="power">Powered by Jiz Technologies</span>
+          </div>
+      </div>
+          
+          
+            
+            
+         
+   <div id="prefeedback" data-role="page">
+       
+       <div data-role="header"><a href="#home" data-rel="back" data-role="button">Back</a> <h1>Proceed for Feedbacks</h1></div>
+       
+       
+       <div data-role="content">
+           
+           
+        
+           <a href="#feedback" data-role="button">Proceed</a>
+       </div>
+       
+       
+       <div data-role="footer"><span class="power">Powered by Jiz Technologies</span> </div>
+   </div>    
+       
+            
+    
+    <div id="feedback"  data-role="page">
+     
+          <div data-role="header"> <a href="#prefeedback"  data-rel="back" data-role="button">Back</a>  <h1>Your Feedback</h1> </div>
+        
+          <div id="content" data-role="content">
+              <div class="success">Feedback was successfull. We would response to it</div>
+              
+              <label for="title">Enter Feedback</label>
+              <input type="text" name="title" id="title"/>
+                            
+              <label for="comment">Enter Comment</label>
+              <textarea rows="15" cols="5" name="comment" id="comment"></textarea>
+              
+              <input type="button" value="Send Feedback" id="sendfeedback" data-theme="e"/>
+          </div>
+        
+          <div data-role="footer"><span class="power">Powered by Jiz Technologies</span> </div>
+    </div>
+         
+            
+         
+      
+    <div data-role="page" id="letchat">
+        
+        <div data-role="header">
+            <a href="#" data-rel="back" data-role="button">Back</a>
+            <h1>Let's chat</h1>
+        </div>
+        
+        <div data-role="content">
+            
+            <label for="mdate">Enter date</label>
+            
+              <input type="date" name="mdate" id="mdate1" data-inline="true" required="required">
+              
+              <input type="button" name="getmessage" id="getmessage1" value="Get Message" >
+            
+            
+              <ul data-role="listview" id="letchatmsg">
+            
+                  
+                  
+              </ul>
+        </div>
+        
+        <div data-role="footer"><span class="power">Powered by Jiz Technologies</span></div>
+        
+       </div>
+            
+ 
+         
+         
+            <div data-role="page" id="messagedetail">
+       
+                <div data-role="header">Pastor Message Details</div>
+                
+                
+                <div data-role="content">
+                                        
+  <div data-role="tabs" id="tabs">
+  <div data-role="navbar">
+    <ul>
+      <li><a href="#one" data-ajax="false">one</a></li>
+      <li><a href="#two" data-ajax="false">two</a></li>
+      <li><a href="ajax-content.php" data-ajax="false">three</a></li>
+    </ul>
+  </div>
+                        
+  <div id="one" class="ui-body-d ui-content">
+    <h1>First tab contents</h1>
+  </div>
+ 
+  <div id="two">
+    <ul data-role="listview" data-inset="true">
+        <li><a href="#">Acura</a></li>
+        <li><a href="#">Audi</a></li>
+        <li><a href="#">BMW</a></li>
+        <li><a href="#">Cadillac</a></li>
+        <li><a href="#">Ferrari</a></li>
+    </ul>
+  </div>
+</div>
+                    
+                    
+                </div>
+                
+                
+                <div data-role="footer"><span class="power">Powered by Jiz Technologies</span></div>
+     </div>
+            
+            
+</body>
+</html>

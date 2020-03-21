@@ -1,0 +1,2 @@
+The objects here would be used by the android native client to connect to the application 
+It would also be used by  the html5 mobile client to communicate with the back end server
